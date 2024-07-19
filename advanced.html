@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocPlanner</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(45deg, #28a745, #1e7e34);
+            color: #fff;
+            padding: 1em 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.5s ease;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 2em;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4em 0;
+            background: url('https://www.docplanner.com/img/logo.png') no-repeat center center/contain;
+            background-color: #28a745;
+            color: #fff;
+            background-blend-mode: multiply;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+        }
+
+        .container {
+            width: 80%;
+            margin: 2em auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2em;
+        }
+
+        .service-item {
+            background: #fff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-item img {
+            width: 50px;
+            height: auto;
+            display: block;
+            margin-bottom: 1em;
+        }
+
+        .service-item h3 {
+            margin-bottom: 1em;
+        }
+
+        .service-item p {
+            margin: 0;
+        }
+
+        .service-item:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .service-item:hover:before {
+            opacity: 1;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>DocPlanner</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <h2>We make healthcare work for everyone</h2>
+        <p>Discover amazing healthcare services and professionals.</p>
+    </section>
+
+    <section class="container" id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <img src="doctor.jpg" alt="Service 1">
+                <h3>Find a Doctor</h3>
+                <p>Search for doctors, clinics, and hospitals near you.</p>
+            </div>
+            <div class="service-item">
+                <img src="images.png" alt="Service 2">
+                <h3>Book an Appointment</h3>
+                <p>Easily book an appointment with a healthcare professional.</p>
+            </div>
+            <div class="service-item">
+                <img src="DisplayFileFormFileName.jpeg" alt="Service 3">
+                <h3>Online Consultations</h3>
+                <p>Get medical advice from the comfort of your home.</p>
+            </div>
+            <div class="service-item">
+                <img src="tips.jpg" alt="Service 4">
+                <h3>Health Tips</h3>
+                <p>Receive tips and advice to maintain a healthy lifestyle.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; DocPlanner 2024. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

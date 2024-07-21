@@ -67,18 +67,45 @@
             background-blend-mode: multiply;
         }
 
-        .hero h2 {
-            font-size: 2.5em;
-            margin-bottom: 0.5em;
+        .hero-content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 2em;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .hero p {
+        .hero-content .hero-text {
+            flex: 1;
+            min-width: 300px;
+            max-width: 45%;
+        }
+
+        .hero-content .hero-text p {
             font-size: 1.2em;
+            margin: 1em 0;
         }
 
         .container {
             width: 80%;
             margin: 2em auto;
+        }
+
+        .statistics {
+            text-align: center;
+            margin: 2em 0;
+        }
+
+        .statistics h2 {
+            font-size: 2em;
+            margin-bottom: 1em;
+        }
+
+        .statistics p {
+            font-size: 1.2em;
+            margin: 0.5em 0;
         }
 
         .services-grid {
@@ -117,20 +144,15 @@
             margin: 0;
         }
 
-        .service-item:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
+        .country-selector {
+            margin-top: 1em;
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            color: #333;
+            font-size: 1em;
             width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .service-item:hover:before {
-            opacity: 1;
         }
 
         footer {
@@ -157,8 +179,22 @@
     </header>
 
     <section class="hero" id="home">
-        <h2>We make healthcare work for everyone</h2>
-        <p>Discover amazing healthcare services and professionals.</p>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Making the healthcare experience more human</h2>
+                <p>We want patients to find the perfect doctor and book an appointment in the most easy way. The patient journey should be enjoyable, and that's why we are always next to them: to help them find the best possible care. Anytime, anywhere.</p>
+            </div>
+            <div class="hero-text">
+                <p>We also help doctors to better manage their practice and build their online reputation. With our integrated end-to-end solution, doctors are able not only to improve their online presence, but also to devote their time to what really matters: their patients.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container statistics">
+        <h2>Our Impact</h2>
+        <p><strong>90,000,000</strong> patients visit our websites each month</p>
+        <p><strong>15,000,000</strong> appointments booked last month</p>
+        <p><strong>210,000</strong> active doctors trust our solutions</p>
     </section>
 
     <section class="container" id="services">
@@ -168,6 +204,22 @@
                 <img src="doctor.jpg" alt="Service 1">
                 <h3>Find a Doctor</h3>
                 <p>Search for doctors, clinics, and hospitals near you.</p>
+                <select class="country-selector">
+                    <option value="">Select your country</option>
+                    <option value="PL">Poland</option>
+                    <option value="BR">Brazil</option>
+                    <option value="MX">Mexico</option>
+                    <option value="ES">Spain</option>
+                    <option value="IT">Italy</option>
+                    <option value="DE">Germany</option>
+                    <option value="TR">Turkey</option>
+                    <option value="CO">Colombia</option>
+                    <option value="CZ">Czech Republic</option>
+                    <option value="PT">Portugal</option>
+                    <option value="AR">Argentina</option>
+                    <option value="PE">Peru</option>
+                    <option value="CL">Chile</option>
+                </select>
             </div>
             <div class="service-item">
                 <img src="images.png" alt="Service 2">
